@@ -1,3 +1,5 @@
+package java;
+
 import com.sun.net.httpserver.HttpServer;
 import java.io.*;
 import java.net.InetSocketAddress;
@@ -11,7 +13,7 @@ public class ServidorHttpSimples {
 
         /* INICIO DO CÓDIGO */
         servidor.createContext("/", troca -> {
-            enviarArquivo(troca, "index.html", "text/html");
+            enviarArquivo(troca, "java/index.html", "text/html");
         });
 
         servidor.createContext("/estilo.css", troca -> {

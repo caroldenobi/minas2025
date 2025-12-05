@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/atividades.css">
+    <link rel="stylesheet" href="/css/geral.css">
+    <link rel="icon" href="/img/academyflow-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    <title>AcademyFlow | Mural de Atividades</title>
+</head>
+<body>
+<header>
+    <div class="logo-header">
+        <a href="#">
+            <img src="/academyflow-nome.png" alt="Logo AcademyFlow">
+        </a>
+    </div>
+    <div class="nav">
+        <div class="container-btn-header">
+            <h4>Bem-Vindo Aluno</h4>
+            <p id="nome-usuario"></p>
+        </div>
+        <div class="buttons">
+            <button class="dark-mode-button" id="toggle-theme" aria-label="Alternar modo escuro">
+                <img class="light-theme-img" src="/img/light-theme.svg" alt="Ícone Claro">
+                <img class="dark-theme-img" src="/img/dark-theme.svg" alt="Ícone Escuro">
+            </button>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="titulo">
+        <div class="tituloh1">
+            <h1>Mural de Atividades</h1>
+        </div>
+    </section>
+    <section class="atividades">
+        <div class="container reveal">
+            <div class="bloco">
+                <div class="bloco-header">
+                    <h3>Recitar o Hino Nacional</h3>
+                    <div class="bloco-header-botao">
+                        <button class="feito">
+                            <img src="/img/icon-feito.svg" alt="Imagem" />
+                        </button>
+                    </div>
+                </div>
+                <div class="bloco-content">
+                    <div class="bloco-content-infos">
+                        <h6>00/00/00</h6>
+                        <h6>16h</h6>
+                        <h6>Ginasio</h6>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, nam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="/js/login.js"></script>
+<script src="/js/script.js"></script>
+<script>
+    window.onload = function() {
+        var usuario = localStorage.getItem("usuario"); // pega o valor salvo no localStorage
+        var usuario_existe = localStorage.getItem("usuario_existe") === "true";
+
+        if (usuario_existe) {
+            console.log("O usuário existe.");
+            document.getElementById("nome-usuario").innerHTML = usuario+"!";
+        } else {
+            console.log("O usuário não existe.");
+            document.getElementById("nome-usuario").innerHTML = "Nenhum usuário encontrado";
+        }
+    };
+</script>
+</body>
+</html>

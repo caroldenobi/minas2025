@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/geral.css">
+    <link rel="icon" href="/img/academyflow-logo.png">
+    <title>AcademyFlow | Login</title>
+</head>
+<body>
+<header>
+    <div class="navegation">
+        <a href="/">Home</a>
+        <button class="dark-mode-button" id="toggle-theme" aria-label="Alternar modo escuro">
+            <img class="light-theme-img" src="/img/dark-theme.svg" alt="Ícone Claro">
+            <img class="dark-theme-img" src="/img/light-theme.svg" alt="Ícone Escuro">
+        </button>
+    </div>
+</header>
+<main>
+    <!-- Alerta personalizado -->
+    <div id="customAlert" class="alert" style="display: none;">
+        <div class="alert-content">
+            <span id="alertMessage"></span>
+            <button type="button" onclick="hideAlert()">OK</button>
+        </div>
+    </div>
+    <section class="container reveal">
+        <form onsubmit="event.preventDefault(); verificar_usuario();">
+            <div class="bloco">
+                <label for="usuario">Usuário</label>
+                <input type="text" placeholder="Nome Completo" id="usuario" name="usuario" required>
+            </div>
+
+            <div class="bloco">
+                <label for="senha">Senha</label>
+                <div class="inputsenha">
+                    <input type="password" placeholder="Mínimo 8 caracteres" id="senha" name="senha" minlength="8" required>
+                    <button type="button" id="botaosenha" class="revelar-senha" onclick="togglePassword()">👁️</button>
+                </div>
+            </div>
+
+            <div class="bloco">
+                <label for="tipo">Perfil</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecionar</option>
+                    <option value="aluno">Aluno</option>
+                    <option value="professor">Professor</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit" id="enviar">Enviar</button>
+            </div>
+        </form>
+    </section>
+    <section class="infos reveal">
+        <div class="linha reveal">
+            <img src="/img/estudante.jpg" alt="">
+            <div class="infos-content">
+                <h2>Atendemos <span>escolas</span> de <span>alto nivel</span></h2>
+                <p>Atendemos escolas de alto nível, oferecendo soluções de excelência que elevam a qualidade do ensino, aprimoram a gestão e fortalecem a experiência educacional. Nosso compromisso é apoiar instituições que buscam inovação, eficiência e resultados superiores.</p>
+            </div>
+        </div>
+        <div class="linha reveal">
+            <div class="infos-content">
+                <h2><span>Facilidade</span> para todas as idades!</h2>
+                <p>Uma experiência simples e intuitiva, pensada para oferecer facilidade e acessibilidade a pessoas de todas as idades, garantindo que todos possam aproveitar sem complicação.</p>
+            </div>
+            <img src="/escola-primaria.jpg" alt="">
+        </div>
+    </section>
+</main>
+<script src="/js/login.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>
+

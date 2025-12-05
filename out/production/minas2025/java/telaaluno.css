@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c77dff;
+    color: #4f4f4f;
+}
+.container {
+    display: flex;
+}
+.column-esquerda {
+    background-color:#c77dff;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    height: 2000px;
+}
+.column-esquerda h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.column-esquerda p {
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+.logout {
+    background-color: #71399c;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.logout a{
+    color:white;
+}
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f7effd;
+}
+.header {
+    text-align: right;
+    margin-bottom: 20px;
+    background-color: #f4e9fd;
+}
+.add-atividade {
+    background-color:#c77dff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.atividade {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.atividade-card {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 15px;
+    border-radius: 7px rgb(115, 45, 136);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.atividade-card p{
+    color:black;
+}
+.icon {
+    background-color: #c77dff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 40px;
+}
+.atividade-card p {
+    font-size: 18px;
+    margin: 0;
+}
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="listar.css"> 
+    <title>Lista de Atividades</title>
+</head>
+<body>
+    
+    <div class="classeExtra">
+        <div class="bloco-content">
+            <h2>Lição de Inglês</h2> 
+            <p><strong>Data:</strong> 2025-12-10</p>
+            <p><strong>Status:</strong> Não Concluído</p>
+            <p>realizar as páginas 123 e 124 do capítulo 5</p>
+        </div>
+
+        <div class="botoes">
+            <form method="POST" action="/concluido_aluno"><input type="hidden" name="id" value="ID_INGLES"><input type="hidden" name="acao" value="Concluido"><button type="submit">Concluído</button></form>
+            <form method="POST" action="/concluido_aluno"><input type="hidden" name="id" value="ID_INGLES"><input type="hidden" name="acao" value="Não Concluido"><button type="submit">Não concluído</button></form>
+            <form method="POST" action="/excluir"><input type="hidden" name="id" value="ID_INGLES"><input type="hidden" name="acao" value="excluir"><button class="excluir" type="submit">Excluir</button></form>
+        </div>
+    </div>
+    ---
+
+    <div class="classeExtra">
+        <div class="bloco-content">
+            <h2>Mapa mental de História</h2> 
+            <p><strong>Data:</strong> 2025-12-16</p>
+            <p><strong>Status:</strong> Não Concluído</p>
+            <p>Faça um mapa mental, do período de napoleão</p>
+        </div>
+
+        <div class="botoes">
+            <form method="POST" action="/concluido_aluno"><input type="hidden" name="id" value="ID_HISTORIA"><input type="hidden" name="acao" value="Concluido"><button type="submit">Concluído</button></form>
+            <form method="POST" action="/concluido_aluno"><input type="hidden" name="id" value="ID_HISTORIA"><input type="hidden" name="acao" value="Não Concluido"> <button type="submit">Não concluído</button></form>
+            <form method="POST" action="/excluir"><input type="hidden" name="id" value="ID_HISTORIA"><input type="hidden" name="acao" value="excluir"><button class="excluir" type="submit">Excluir</button></form>
+        </div>
+    </div>
+    ---
+
+    <div class="classeExtra">
+        <div class="bloco-content">
+        </div>
+
+        <div class="botoes">
+            <form method="POST" action="/concluido_aluno"><input type="hidden" name="id" value="ID_PESQUISA"><input type="hidden" name="acao" value="Concluido"><button type="submit">Concluído</button></form>
+            <form method="POST" action="/concluido_aluno"><input type="hidden" name="id" value="ID_PESQUISA"><input type="hidden" name="acao" value="Não Concluido"><button type="submit">Não concluído</button></form>
+            <form method="POST" action="/excluir"><input type="hidden" name="id" value="ID_PESQUISA"><input type="hidden" name="acao" value="excluir"><button class="excluir" type="submit">Excluir</button></form>
+        </div>
+    </div>
+    </body>
+</html>
+</html>

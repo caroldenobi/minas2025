@@ -1,0 +1,123 @@
+/* Variáveis para fácil manutenção de cores */
+:root {
+    --cor-fundo-principal: #e0bcf5; /* Lavanda suave da Imagem 1 */
+    --cor-fundo-mural: #ffffff;
+    --cor-primaria: #8a2be2; /* Roxo para o logo */
+    --cor-secundaria: #333; /* Cor do texto */
+    --cor-input-borda: #ccc;
+    --cor-btn-cadastrar: #4CAF50; /* Verde do botão 'Adicionar Tarefa' */
+    --cor-btn-voltar: #6c757d; /* Cinza para o botão 'Voltar' */
+}
+
+/* Estilos Globais e Fundo */
+body {
+    background-color: var(--cor-fundo-principal);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container-principal {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Cabeçalho 'm.i.n.a -mural de atividades' */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    color: var(--cor-primaria);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 5px;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: var(--cor-secundaria);
+    font-weight: normal;
+}
+
+/* Estilo do Container Principal (Mural/Formulário) */
+.mural {
+    background-color: var(--cor-fundo-mural);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.mural h2 {
+    color: var(--cor-secundaria);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+/* Estilo dos Grupos de Input */
+.input-grupo {
+    margin-bottom: 15px;
+    /* Alinha o label e o input, imitando o espaçamento */
+}
+
+.input-grupo label {
+    display: block;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    margin-bottom: 5px;
+}
+
+.input-grupo input[type="text"],
+.input-grupo input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-input-borda);
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    font-size: 1em;
+}
+
+/* Estilo dos Botões */
+.btn-cadastrar,
+.btn-voltar {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 10px;
+    width: 100%; /* Ocupa a largura total para destaque */
+    text-transform: uppercase;
+}
+
+.btn-cadastrar {
+    background-color: var(--cor-btn-cadastrar);
+    color: white;
+    margin-bottom: 10px; /* Espaço entre Cadastrar e Voltar */
+}
+
+.btn-cadastrar:hover {
+    background-color: #45a049;
+}
+
+.btn-voltar {
+    background-color: var(--cor-btn-voltar);
+    color: white;
+}
+
+.btn-voltar:hover {
+    background-color: #5a6268;
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="telainicial.css">
+</head>
+<body>
+    <header class="top-bar">
+        <img src="logomina.png" alt="Logo M.I.N.A" class="logo">
+    </header>
+   
+    <div class="login-container">
+        <h1>Bem-vindo(a) de Volta!</h1>
+         <form action="/login">
+            <input type="text" name="usuario" id="usuario"  placeholder="Usuario" required />
+            <input type="password" name="senha" id="senha" placeholder="Senha"required />
+            <select class="opcoes">
+                <option>Aluno</option>
+                <option>Professor</option>
+            </select>
+           <div>
+            <button type="submit">Entrar</button>
+           </div>  
+        </form>
+       
+    <div class="links">
+        <p>Novo na <a href="#">M.I.N.A?</a> <a href="cadastro.html">Cadastre-se</a></p>
+        <p class="sobrenos"><a href="sobrenos.html">Sobre nós</a></p>
+
+    </div>
+    </div>
+<script>
+    function atualizarExibicao() {
+      const params = new URLSearchParams(window.location.search);
+
+      // Pega os parâmetros da query string
+      const tipo = params.get('tipo') || 'Não informado';
+      const usuario = params.get('usuario') || 'Não informado';
+      const senha = params.get('senha') || 'Não informada';
+
+      // Atualiza os elementos HTML com os valores
+      document.getElementById('usuarioDisplay').textContent = usuario;
+      document.getElementById('senhaDisplay').textContent = senha;
+      document.getElementById('tipoDisplay').textContent = tipo;
+
+      // Atualiza os campos de input com os valores da query string (facilita o preenchimento após a atualização)
+      document.getElementById('usuario').value = usuario;
+      document.getElementById('senha').value = senha;
+      document.getElementById('tipo').value = tipo;
+    }
+
+    // Função para limpar os campos de entrada e as exibições
+
+    // function limparCampos() {
+    //   // Limpar campos de input
+    //   document.getElementById('usuario').value = '';
+    //   document.getElementById('senha').value = '';
+    //   document.getElementById('tipo').value = 'aluno'; // Definido como padrão, pode ser 'professor' também
+    //   // Limpar exibições de dados
+    // }
+
+    // Atualiza os dados assim que a página é carregada
+    window.onload = atualizarExibicao;
+
+    function enviarDados() {
+        const usuario = document.getElementById('usuario').value.trim();
+        const senha = document.getElementById('senha').value;
+        const tipo = document.getElementById('tipo').value;
+
+        if (!usuario || !senha) {
+          alert('Por favor, preencha o nome e a senha.');
+          return;
+        }
+        if(tipo==="Selecionar"){
+          alert('Adicione um perfil de usuario.')
+          return
+        }
+
+        const url = new URL(window.location.href);
+
+        url.searchParams.set('tipo', tipo);
+        url.searchParams.set('usuario', usuario);
+        url.searchParams.set('senha', senha);
+
+        window.history.pushState({}, '', url);
+
+        atualizarExibicao();
+        limparCampos();
+        window.location.reload();
+    }
+</script>
+</body>
+</html>

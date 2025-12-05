@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Atividade</title>
+    <link rel="stylesheet" href="./cadastrar.css">
+</head>
+<body>
+    <div class="container-principal">
+        <header>
+            <div class="logo">m.i.n.a</div>
+            <h1>-mural de atividades</h1>
+        </header>
+        
+        <div class="mural cadastro-mural"> 
+            <h2>Cadastrar Atividade</h2>
+            <form method="POST" action="/cadastro">
+                <div class="input-grupo">
+                    <label for="nome-atividade">Nome:</label>
+                    <input type="text" id="nome-atividade" name="nome" placeholder="Insira o nome da atividade" required>
+                </div>
+
+                <div class="input-grupo">
+                    <label for="descricao-atividade">Descrição:</label>
+                    <input type="text" id="descricao-atividade" name="descricao" maxlength="50" placeholder="Insira uma breve descrição da atividade" required>
+                </div>
+
+                <div class="input-grupo">
+                    <label for="data-atividade">Data:</label>
+                    <input type="date" id="data-atividade" name="data" required>
+                </div>
+
+                <button type="submit" class="btn-cadastrar">Cadastrar</button>
+            </form>
+
+            <button id="voltar-bloco" class="btn-voltar">Voltar</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/*
+ * 1. Fundo Lilás
+ * Aplicado à tag <body> para cobrir toda a página
+ */
+body {
+    background-color: #c77dff; /* Lilás suave (Lavender) */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/*
+ * 2. Balões Brancos (elementos .classeExtra)
+ * Aplicado a cada atividade individual.
+ */
+.classeExtra {
+    /* Cor de fundo branca */
+    background-color: white;
+
+    /* Adiciona bordas arredondadas */
+    border-radius: px;
+
+    /* Sombra para dar destaque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* Adiciona espaço interno */
+    padding: 20px;
+
+    /* Margem para separar uma atividade da outra */
+    margin-bottom: 25px;
+
+    /* Para alinhar o balão no centro, se a largura for menor que 100% */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 3. Traço Amarelo (Usando um pseudo-elemento) */
+    position: relative; /* Necessário para posicionar o traço */
+    border-left: 8px solid #ffd700; /* Amarelo (Gold) como traço lateral */
+}
+
+
+
+/*
+ * Estilos para o Conteúdo e Botões
+ */
+
+.bloco-content {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.bloco-content h2 {
+    color: #4a4a4a; /* Cor mais escura para o título */
+    margin-top: 0;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Para garantir que os botões quebrem a linha se a tela for pequena */
+}
+
+.botoes button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white; /* Texto branco nos botões */
+    text-transform: uppercase;
+}
+
+/* Botão Concluído (Verde) */
+.botoes form:nth-child(1) button {
+    background-color: #5cb85c;
+}
+
+/* Botão Não Concluído (Amarelo/Laranja) */
+.botoes form:nth-child(2) button {
+    background-color: #f0ad4e;
+}
+
+/* Botão Excluir (Roxo/Lilás, combinando com o fundo) */
+.botoes form:nth-child(3) button.excluir {
+    background-color: #9370db; /* Lilás Médio */
+}
+
+
+.botoes form:nth-child(1) button {
+    background-color: #8ce6c3; /* Verde */
+    color: white;
+}
+
+
+.botoes form:nth-child(2) button {
+    background-color: #b6b6b6; /* Laranja */
+    color: white;
+}
+
+
+.botoes form:nth-child(3) button.excluir {
+    background-color: #b86ce4; /* Vermelho */
+    color: white;
+}
