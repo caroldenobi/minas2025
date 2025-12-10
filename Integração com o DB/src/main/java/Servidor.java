@@ -54,7 +54,13 @@ public class Servidor {
         s.createContext("/cadastrar.css", t -> enviarCSS(t, "cadastrar.css")); // CSS
 
 
-        s.createContext("/logomina.png", t -> enviarImagem(t, "logomina.png")); // IMAGEM
+        s.createContext("/logomina.png", t -> enviarImagem(t, "logomina.png"));// IMAGEM
+        s.createContext("/logomina-removebg-preview.png", t -> enviarImagem(t, "logomina-removebg-preview.png"));
+        s.createContext("/rayka.png", t -> enviarImagem(t, "rayka.png"));
+        s.createContext("/marih.png", t -> enviarImagem(t, "marih.png"));
+        s.createContext("/carol.png", t -> enviarImagem(t, "carol.png"));
+
+
 
         s.start();
         System.out.println("Servidor Iniciado");
